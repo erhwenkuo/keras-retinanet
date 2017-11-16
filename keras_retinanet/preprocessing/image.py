@@ -48,7 +48,7 @@ def random_transform_batch(
     seed=None
 ):
     if seed is None:
-        seed = np.uint32(time.time() * 1000)
+        seed = np.uint32(time.time())
 
     for batch in range(image_batch.shape[0]):
         image_batch[batch] = image_data_generator.random_transform(image_batch[0], seed=seed)
